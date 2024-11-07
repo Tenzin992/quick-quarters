@@ -1,5 +1,6 @@
 function handleOrderSubmit(event) {
-    event.preventDefault(); // Prevent form from submitting immediately
+    // Prevent form from submitting if using a custom submission method (optional)
+    // event.preventDefault(); // Uncomment this if you want to send data with JavaScript
 
     // Get form values
     const subscription = document.getElementById("subscription").value;
@@ -7,7 +8,6 @@ function handleOrderSubmit(event) {
     const customAmount = document.getElementById("customAmount").value;
     const zipCode = document.getElementById("zipCode").value;
     const contact = document.getElementById("contact").value;
-    const notes = document.getElementById("notes").value;
 
     // Determine the order amount message
     let orderAmountMessage = orderAmount === "50+" 
@@ -19,10 +19,10 @@ function handleOrderSubmit(event) {
         `Thank you for your order! A ${subscription} subscription with ${orderAmountMessage} will be delivered. We will contact you at ${contact}.`;
     document.getElementById("orderMessage").style.color = "green";
 
-    // Simulate sending form data to Formspree
+    // Simulate email confirmation to the customer
     sendEmailConfirmation(contact);
 
-    // Reset the form after submission
+    // Clear the form (optional)
     document.getElementById("orderForm").reset();
 }
 

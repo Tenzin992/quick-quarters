@@ -14,9 +14,12 @@ document.getElementById("orderAmount").addEventListener("change", function() {
     }
 });
 
-// Optional: Display a message after the form submits
+// Display a message after the form submits
 document.getElementById("orderForm").addEventListener("submit", function(event) {
+    // Display a temporary message indicating the form is being submitted
     document.getElementById("orderMessage").textContent = 
-        "Thank you for your order! We'll be in touch shortly.";
-    document.getElementById("orderMessage").style.color = "green";
+        "Submitting your order...";
+    document.getElementById("orderMessage").style.color = "blue";
+
+    // This message will be shown until the form submission completes
 });

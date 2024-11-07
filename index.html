@@ -43,7 +43,7 @@
                 <option value="30">$30 in quarters</option>
                 <option value="40">$40 in quarters</option>
                 <option value="50">$50 in quarters</option>
-                <option value="50+">More than $50 in quarters </option>
+                <option value="50+">More than $50 in quarters (Specify amount)</option>
             </select>
 
             <label for="customAmount" id="customAmountLabel" style="display: none;">Specify Amount (Minimum $50):</label>
@@ -54,6 +54,10 @@
 
             <label for="contact">Your Contact Info (Email or Phone):</label>
             <input type="text" id="contact" name="contact" required>
+
+            <!-- Notes Section -->
+            <label for="notes">Additional Notes or Questions:</label>
+            <textarea id="notes" name="notes" placeholder="Enter any specific instructions or questions here"></textarea>
 
             <button type="submit" class="button">Confirm Order</button>
         </form>

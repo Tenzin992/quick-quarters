@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Quarters Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Quick Quarters Delivery</h1>
+        <p>Quarters Delivered to Your Door in the San Francisco Bay Area – Fast and Convenient</p>
+        <a href="#order" class="button">Order Now</a>
+    </header>
+
+    <!-- Service Description -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <p>Quick Quarters Delivery is a local service that provides quarters right to your door, designed for your convenience and ease. Here’s how it works:</p>
+        <ol>
+            <li><strong>Place Your Order</strong>: Choose your subscription plan and the amount of quarters you need.</li>
+            <li><strong>Receive Confirmation</strong>: You’ll get an email or text confirmation with delivery details.</li>
+            <li><strong>Track Your Delivery</strong>: We’ll keep you updated and notify you when we’re on our way.</li>
+            <li><strong>Enjoy the Convenience</strong>: Get quarters without any hassle and trust that we’re here to serve you, right in the San Francisco Bay Area!</li>
+        </ol>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+        <h2>Order Your Quarters</h2>
+        <form id="orderForm" action="https://formspree.io/f/xrbgqogj" method="POST" onsubmit="return handleOrderSubmit(event)">
+            <label for="subscription">Choose Subscription:</label>
+            <select id="subscription" name="subscription" required>
+                <option value="next-day">Next-Day Delivery - $10/month</option>
+                <option value="same-day">Same-Day Delivery - $20/month</option>
+            </select>
+
+            <label for="orderAmount">Order Amount:</label>
+            <select id="orderAmount" name="orderAmount" required>
+                <option value="20">$20 in quarters</option>
+                <option value="30">$30 in quarters</option>
+                <option value="40">$40 in quarters</option>
+                <option value="50">$50 in quarters</option>
+                <option value="50+">More than $50 in quarters </option>
+            </select>
+
+            <label for="customAmount" id="customAmountLabel" style="display: none;">Specify Amount (Minimum $50):</label>
+            <input type="number" id="customAmount" name="customAmount" min="50" style="display: none;" placeholder="Enter amount in dollars">
+
+            <label for="zipCode">Enter Your Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode" required>
+
+            <label for="contact">Your Contact Info (Email or Phone):</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit" class="button">Confirm Order</button>
+        </form>
+        <p id="orderMessage"></p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h3>What is the minimum order amount?</h3>
+        <p>The minimum order amount is $20 in quarters per delivery.</p>
+
+        <h3>How far do you deliver?</h3>
+        <p>We deliver within a 25-mile radius in the San Francisco Bay Area. Additional fees may apply for distances beyond this range.</p>
+
+        <h3>What payment methods are accepted?</h3>
+        <p>We accept payments through Venmo and Zelle. Payment details will be provided after order confirmation.</p>
+
+        <h3>Can I get more than 4 deliveries per month?</h3>
+        <p>Yes, additional orders can be placed with a small per-order fee.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, please <a href="mailto:placeholder@example.com">email us</a>.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #0073e6;
+}
+header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+header .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section Styles */
+section {
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+h2 {
+    font-size: 1.8em;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+p {
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+form select, form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+form .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Order Message */
+#orderMessage {
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}

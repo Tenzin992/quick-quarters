@@ -83,15 +83,20 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions, please email us at <span id="email"></span>.</p>
-    </section>
+        <form action="https://formspree.io/f/xrbgqogj" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    <script>
-        // Your email address
-        const email = "lekpheltenzin@gmail.com";
-        // Display the email address
-        document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;
-    </script>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Enter your message here"></textarea>
+
+            <button type="submit" class="button">Send Message</button>
+        </form>
+        <p id="contactMessage"></p>
+    </section>
 
     <script src="script.js"></script>
 </body>

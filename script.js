@@ -16,16 +16,17 @@ document.getElementById("orderAmount").addEventListener("change", function() {
 
 // Display a message after the form submits
 document.getElementById("orderForm").addEventListener("submit", function(event) {
-    // Prevent default form submission behavior
-    event.preventDefault(); 
-
+    // Prevent the default form submission
+    event.preventDefault();
+    
     // Display a temporary message indicating the form is being submitted
     document.getElementById("orderMessage").textContent = 
         "Submitting your order...";
     document.getElementById("orderMessage").style.color = "blue";
 
-    // After a brief delay, submit the form to Formspree
+    // Clear the form fields after a short timeout
     setTimeout(() => {
-        this.submit();
-    }, 2000); // Adjust delay as needed
+        document.getElementById("orderForm").reset(); // Reset the form
+        document.getElementById("orderMessage").textContent = ""; // Clear the message
+    }, 1000); // Adjust the timeout as needed (1000ms = 1 second)
 });

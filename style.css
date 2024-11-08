@@ -21,14 +21,17 @@ header {
     text-align: center;
     margin-bottom: 20px;
 }
+
 header h1 {
     font-size: 2.5em;
     color: #0073e6;
 }
+
 header p {
     font-size: 1.2em;
     margin: 10px 0;
 }
+
 header .button {
     display: inline-block;
     margin-top: 10px;
@@ -37,6 +40,11 @@ header .button {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
 }
 
 /* Section Styles */
@@ -44,15 +52,18 @@ section {
     max-width: 600px;
     margin-bottom: 40px;
 }
+
 h2 {
     font-size: 1.8em;
     color: #0073e6;
     margin-bottom: 10px;
 }
+
 h3 {
     font-size: 1.3em;
     margin-top: 15px;
 }
+
 p {
     margin-bottom: 10px;
 }
@@ -62,11 +73,25 @@ form label {
     display: block;
     margin: 10px 0 5px;
 }
-form select, form input {
+
+form select,
+form input,
+form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
+
+form select:focus,
+form input:focus,
+form textarea:focus {
+    border-color: #0073e6; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
 form .button {
     width: 100%;
     padding: 10px;
@@ -75,6 +100,11 @@ form .button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
 }
 
 /* Order Message */
@@ -87,4 +117,17 @@ form .button {
 /* Contact Section */
 #contact {
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Smaller font on mobile */
+    }
+    header p {
+        font-size: 1em; /* Smaller font on mobile */
+    }
+    h2 {
+        font-size: 1.5em; /* Smaller font for section headings on mobile */
+    }
 }

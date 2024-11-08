@@ -83,8 +83,15 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions, please <a href="mailto:placeholder@example.com">email us</a>.</p>
+        <p>If you have any questions, please email us at <span id="email"></span>.</p>
     </section>
+
+    <script>
+        // Your email address
+        const email = "lekpheltenzin@gmail.com";
+        // Display the email address
+        document.getElementById("email").innerHTML = `<a href="mailto:${email}">${email}</a>`;
+    </script>
 
     <script src="script.js"></script>
 </body>
